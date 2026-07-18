@@ -1,0 +1,78 @@
+{
+  "missing_values": {
+    "events": {
+      "event_time": "0",
+      "event_type": "0",
+      "product_id": "0",
+      "category_id": "0",
+      "category_code": "0",
+      "brand": "0",
+      "price": "0",
+      "user_id": "0",
+      "user_session": "0",
+      "year": "0",
+      "month": "0",
+      "day": "0"
+    },
+    "users": {
+      "id": "0",
+      "firstName": "0",
+      "lastName": "0",
+      "maidenName": "0",
+      "age": "0",
+      "gender": "0",
+      "email": "0",
+      "phone": "0",
+      "username": "0",
+      "password": "0",
+      "birthDate": "0",
+      "image": "0",
+      "bloodGroup": "0",
+      "height": "0",
+      "weight": "0",
+      "eyeColor": "0",
+      "hair": "0",
+      "ip": "0",
+      "address": "0",
+      "macAddress": "0",
+      "university": "0",
+      "bank": "0",
+      "company": "0",
+      "ein": "0",
+      "ssn": "0",
+      "userAgent": "0",
+      "crypto": "0",
+      "role": "0",
+      "city_from_address": "0"
+    },
+    "products": {
+      "product_id": "0",
+      "category_code": "0",
+      "brand": "0",
+      "price": "0"
+    }
+  },
+  "duplicates": {
+    "events_full_duplicates": "0",
+    "users_duplicate_ids": "0",
+    "products_duplicate_ids": "0"
+  },
+  "schema_issues": {
+    "invalid_event_type_count": "0",
+    "price_not_numeric": false,
+    "age_not_numeric": false
+  },
+  "range_issues": {
+    "invalid_price_count": "0",
+    "invalid_age_count": "0",
+    "future_event_count": "0",
+    "empty_session_count": "0"
+  },
+  "row_counts": {
+    "events_original": 10000,
+    "events_cleaned": 10000,
+    "users_original": 1000,
+    "users_cleaned": 1000,
+    "products": 100
+  }
+}
