@@ -1,0 +1,45 @@
+# Configuration for storage partitioning scheme and output paths
+# This config defines how we organize the data after ingestion so downstream
+# stages can efficiently read only what they need instead of scanning everything
+
+# Base directory where all partitioned data will be written
+base_path: "storage/raw"
+
+# Input file paths - these are the files produced by the ingestion stage
+input:
+  events: "data/raw/events_clean.csv"
+  users: "data/raw/users.json"
+
+# Events partitioning configuration
+# Events are time-series data so we partition by date to make time-based queries efficient
+# Using Hive-style partitioning (key=value) which is standard for big data tools
+events:
+  # We'll partition events by year, month, and day based on the event_time column
+  # This lets feature engineering filter by date ranges without scanning all data
+  partition_by:
+    - "year"
+    - "month"
+    - "day"
+  # The column in events.csv that contains the timestamp for partitioning
+  time_column: "event_time"
+  # Output folder structure will look like: storage/raw/events/year=2026/month=07/day=18/
+  partition_format: "year={year}/month={month}/day={day}/"
+
+# Users partitioning configuration
+# Users data is different from events - it's not time-series, just periodic full refreshes
+# So we don't need daily partitioning, just snapshot folders by date
+users:
+  # Users get a single snapshot folder with today's date
+  # This makes it easy to track which version of user data we're using
+  partition_by:
+    - "snapshot_date"
+  # Output folder structure will look like: storage/raw/users/snapshot_date=2026-07-18/
+  partition_format: "snapshot_date={snapshot_date}/"
+
+# File format for storing partitioned data
+# Using parquet instead of csv because:
+# - Columnar format: faster to read only specific columns needed
+# - Compressed: smaller file sizes, saves storage space
+# - Schema preserved: data types are maintained (no more parsing strings)
+# - Better for feature engineering stage which will query this data frequently
+file_format: "parquet"
