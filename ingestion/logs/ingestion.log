@@ -1,0 +1,58 @@
+2026-07-18 17:49:36,054 - INFO - Scheduled API ingestion to run every 5 minutes
+2026-07-18 17:49:36,075 - INFO - Scheduled CSV ingestion to run daily at 5:50 PM
+2026-07-18 17:49:36,135 - INFO - Next run for run_api_ingestion: 2026-07-18 17:54:36.054343
+2026-07-18 17:49:36,157 - INFO - Next run for run_csv_ingestion: 2026-07-18 17:50:00
+2026-07-18 17:49:36,220 - INFO - Scheduler started. Press Ctrl+C to stop.
+2026-07-18 17:50:36,379 - INFO - Starting CSV ingestion job
+2026-07-18 17:50:36,428 - INFO - Starting to read events from data/raw/events.csv
+2026-07-18 17:50:36,603 - ERROR - File not found: data/raw/events.csv
+2026-07-18 17:50:36,604 - INFO - CSV ingestion job finished successfully
+2026-07-18 17:54:36,670 - INFO - Starting API ingestion job
+2026-07-18 17:54:36,680 - INFO - Starting to extract user IDs from events.csv
+2026-07-18 17:54:36,683 - ERROR - Events file not found at data/raw/events.csv
+2026-07-18 17:54:36,684 - INFO - API ingestion job finished successfully
+2026-07-18 17:59:36,691 - INFO - Starting API ingestion job
+2026-07-18 17:59:36,692 - INFO - Starting to extract user IDs from events.csv
+2026-07-18 17:59:36,692 - ERROR - Events file not found at data/raw/events.csv
+2026-07-18 17:59:36,693 - INFO - API ingestion job finished successfully
+2026-07-18 18:04:36,754 - INFO - Starting API ingestion job
+2026-07-18 18:04:36,756 - INFO - Starting to extract user IDs from events.csv
+2026-07-18 18:04:36,759 - ERROR - Events file not found at data/raw/events.csv
+2026-07-18 18:04:36,761 - INFO - API ingestion job finished successfully
+2026-07-18 18:05:37,210 - INFO - Scheduled API ingestion to run every 5 minutes
+2026-07-18 18:05:37,211 - INFO - Scheduled CSV ingestion to run daily at 5:50 PM
+2026-07-18 18:05:37,212 - INFO - Next run for run_api_ingestion: 2026-07-18 18:10:37.210812
+2026-07-18 18:05:37,212 - INFO - Next run for run_csv_ingestion: 2026-07-19 18:05:00
+2026-07-18 18:05:37,213 - INFO - Scheduler started. Press Ctrl+C to stop.
+2026-07-18 18:05:54,760 - INFO - Scheduled API ingestion to run every 5 minutes
+2026-07-18 18:05:54,760 - INFO - Scheduled CSV ingestion to run daily at 5:50 PM
+2026-07-18 18:05:54,761 - INFO - Next run for run_api_ingestion: 2026-07-18 18:10:54.760024
+2026-07-18 18:05:54,761 - INFO - Next run for run_csv_ingestion: 2026-07-18 18:10:00
+2026-07-18 18:05:54,762 - INFO - Scheduler started. Press Ctrl+C to stop.
+2026-07-18 18:10:54,765 - INFO - Starting CSV ingestion job
+2026-07-18 18:10:54,769 - INFO - Starting to read events from c:\Users\Lenovo\CascadeProjects\codebase\data/raw/events.csv
+2026-07-18 18:10:54,826 - INFO - Read chunk of 10000 rows
+2026-07-18 18:10:54,867 - INFO - Cleaned data: dropped 0 rows with invalid price
+2026-07-18 18:10:54,869 - INFO - Cleaned data: dropped 0 rows with future dates
+2026-07-18 18:10:54,870 - INFO - Cleaned data: dropped 0 duplicate rows
+2026-07-18 18:10:54,870 - INFO - Cleaned data: kept 10000 rows out of 10000 total
+2026-07-18 18:10:54,871 - INFO - Total rows read from file: 10000
+2026-07-18 18:10:54,947 - INFO - Saved cleaned data to c:\Users\Lenovo\CascadeProjects\codebase\data/raw/events_clean.csv
+2026-07-18 18:10:54,947 - INFO - Final cleaned data has 10000 rows
+2026-07-18 18:10:54,948 - INFO - CSV ingestion job finished successfully
+2026-07-18 18:10:54,949 - INFO - Starting API ingestion job
+2026-07-18 18:10:54,949 - INFO - Starting to extract user IDs from events.csv
+2026-07-18 18:10:55,003 - INFO - Found 1000 unique user IDs in events.csv
+2026-07-18 18:10:55,004 - INFO - Generating demographic data for each user
+2026-07-18 18:10:55,004 - INFO - Processed 0/1000 users
+2026-07-18 18:10:55,143 - INFO - Generated demographic data for 1000 users
+2026-07-18 18:10:55,457 - INFO - Saved 1000 users to c:\Users\Lenovo\CascadeProjects\codebase\data/raw/users.json
+2026-07-18 18:10:55,459 - INFO - API ingestion job finished successfully
+2026-07-18 18:15:55,463 - INFO - Starting API ingestion job
+2026-07-18 18:15:55,464 - INFO - Starting to extract user IDs from events.csv
+2026-07-18 18:15:55,519 - INFO - Found 1000 unique user IDs in events.csv
+2026-07-18 18:15:55,519 - INFO - Generating demographic data for each user
+2026-07-18 18:15:55,520 - INFO - Processed 0/1000 users
+2026-07-18 18:15:55,679 - INFO - Generated demographic data for 1000 users
+2026-07-18 18:15:56,061 - INFO - Saved 1000 users to c:\Users\Lenovo\CascadeProjects\codebase\data/raw/users.json
+2026-07-18 18:15:56,063 - INFO - API ingestion job finished successfully
