@@ -1,0 +1,52 @@
+2026-07-18 19:43:32,168 - INFO - ============================================================
+2026-07-18 19:43:32,168 - INFO - Starting data validation and profiling
+2026-07-18 19:43:32,169 - INFO - ============================================================
+2026-07-18 19:43:32,169 - INFO - Loading data from parquet partitions
+2026-07-18 19:43:32,219 - INFO - Found 366 events partition files
+2026-07-18 19:43:35,250 - INFO - Loaded 10000 events rows from parquet partitions
+2026-07-18 19:43:35,258 - INFO - Loading users from latest snapshot: c:\Users\Lenovo\CascadeProjects\codebase\storage/raw/users\snapshot_date=2026-07-18\users.parquet
+2026-07-18 19:43:35,303 - INFO - Loaded 1000 users rows
+2026-07-18 19:43:35,304 - INFO - Building products table from events data
+2026-07-18 19:43:35,341 - INFO - Built products table with 100 unique products
+2026-07-18 19:43:35,342 - INFO - Running profiling checks
+2026-07-18 19:43:35,344 - INFO - Checking for missing values
+2026-07-18 19:43:35,370 - INFO - Checking for duplicates
+2026-07-18 19:43:35,391 - INFO - Events: 0 fully duplicate rows
+2026-07-18 19:43:35,392 - INFO - Users: 0 duplicate ids
+2026-07-18 19:43:35,396 - INFO - Products: 0 duplicate product_ids
+2026-07-18 19:43:35,397 - INFO - Checking for schema issues
+2026-07-18 19:43:35,401 - INFO - Checking for range and format issues
+2026-07-18 19:43:35,403 - INFO - Events: 0 rows with price <= 0
+2026-07-18 19:43:35,404 - INFO - Users: 0 rows with age outside 0-100 range
+2026-07-18 19:43:35,434 - INFO - Events: 0 rows with future event_time
+2026-07-18 19:43:35,437 - INFO - Events: 0 rows with empty user_session
+2026-07-18 19:43:35,438 - INFO - Cleaning data
+2026-07-18 19:43:35,438 - INFO - Starting events data cleaning
+2026-07-18 19:43:35,446 - INFO - Dropped 0 rows with invalid event_type
+2026-07-18 19:43:35,451 - INFO - Dropped 0 rows with price <= 0
+2026-07-18 19:43:35,474 - INFO - Dropped 0 rows with future event_time
+2026-07-18 19:43:35,484 - INFO - Dropped 0 rows with empty user_session
+2026-07-18 19:43:35,504 - INFO - Dropped 0 duplicate rows
+2026-07-18 19:43:35,508 - INFO - Removed partitioning columns (year, month, day)
+2026-07-18 19:43:35,511 - INFO - Events cleaning complete: kept 10000 rows, dropped 0 rows total
+2026-07-18 19:43:35,511 - INFO - Starting users data cleaning
+2026-07-18 19:43:35,514 - INFO - Dropped 0 rows with missing id
+2026-07-18 19:43:35,518 - INFO - Dropped 0 rows with invalid age
+2026-07-18 19:43:35,521 - INFO - Filled missing city and gender values with 'unknown'
+2026-07-18 19:43:35,522 - INFO - Users cleaning complete: kept 1000 rows, dropped 0 rows total
+2026-07-18 19:43:35,523 - INFO - Starting products data cleaning
+2026-07-18 19:43:35,524 - INFO - Dropped 0 duplicate product_ids
+2026-07-18 19:43:35,525 - INFO - Products cleaning complete: kept 100 rows
+2026-07-18 19:43:35,526 - INFO - Saving validated data
+2026-07-18 19:43:35,639 - INFO - Saved validated events to c:\Users\Lenovo\CascadeProjects\codebase\validated\clickstream_validated.csv
+2026-07-18 19:43:35,644 - INFO - Saved validated products to c:\Users\Lenovo\CascadeProjects\codebase\validated\products_validated.csv
+2026-07-18 19:43:35,726 - INFO - Saved validated users to c:\Users\Lenovo\CascadeProjects\codebase\validated\users_validated.csv
+2026-07-18 19:43:35,727 - INFO - ============================================================
+2026-07-18 19:43:35,728 - INFO - VALIDATION SUMMARY
+2026-07-18 19:43:35,734 - INFO - ============================================================
+2026-07-18 19:43:35,747 - INFO - Events: 10000 -> 10000 rows
+2026-07-18 19:43:35,748 - INFO - Users: 1000 -> 1000 rows
+2026-07-18 19:43:35,749 - INFO - Products: 100 rows
+2026-07-18 19:43:35,750 - INFO - ============================================================
+2026-07-18 19:43:35,754 - INFO - Saved profiling results to c:\Users\Lenovo\CascadeProjects\codebase\reports\validation_results.json
+2026-07-18 19:43:35,757 - INFO - Data validation completed successfully
